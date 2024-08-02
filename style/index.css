@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding: 1.25rem 1.875rem;
+    background-color: rgb(255, 209, 255);
+}
+
+h1{
+    text-align: center;
+    border-radius: 3.125rem;
+    padding: 0.625rem 0;
+    background-color: rgb(255, 229, 255);
+    border: 2px solid rgb(207, 0, 207);
+}
+
+h1, h2{
+    color: rgb(145, 0, 145);
+    margin-bottom: 1.25rem;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 3.125rem;
+}
+
+fieldset{
+    width: 100%;
+    max-width: 31.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border: none;
+    border-radius: 0.625rem;
+    background-color: rgb(255, 229, 255);
+}
+
+legend{
+    margin: 0.625rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: rgb(145, 0, 145);
+}
+
+label, input, textarea, button{
+    width: 90%;
+    max-width: 31.25rem;
+}
+
+input, textarea, button{
+    margin: 0.3125rem 0 1.25rem 0;
+}
+
+input, textarea, button{
+    border: none;
+    padding: 0.625rem;
+}
+
+input, button{
+    border-radius: 3.125rem;
+}
+
+input, textarea, fieldset{
+    border: 2px solid rgb(207, 0, 207);
+}
+
+textarea{
+    border-radius: 0.625rem;
+}
+
+button, input[type="submit"]{
+    
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button{
+    background-color: rgb(207, 0, 207);
+}
+
+input[type="submit"]{
+    background-color: rgb(255, 66, 255);
+    width: inherit;
+    min-width: 99%;
+}
+
+input[type="range"]{
+    accent-color: rgb(207, 0, 207);
+    padding: 0.625rem 0;
+    margin: 0;
+    cursor: pointer;
+}

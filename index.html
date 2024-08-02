@@ -16,56 +16,56 @@
 
     <fieldset>
 
-      <legend>Personal</legend>
+      <legend>&nbsp;Personal&nbsp;</legend>
 
-      <label for="first-name">first Name</label>
-      <input type="text" id="first-name" name="first-name" required>
+      <label for="first-name">First Name <span style="color: red;">(Required)</span></label>
+      <input type="text" id="first-name" name="first-name" required placeholder="Your Name">
 
-      <label for="last-name">Last Name</label>
-      <input type="text" id="last-name" name="last-name" required>
+      <label for="last-name">Last Name <span style="color: red;">(Required)</span></label>
+      <input type="text" id="last-name" name="last-name" required placeholder="Your Surname">
 
       <label for="status">Status</label>
-      <input type="text" id="status" name="status">
+      <input type="text" id="status" name="status" placeholder="Your position: student, designer, developer, asistant, coach, ...">
 
       <label for="photo">Photo</label>
       <input type="file" id="photo" name="photo" accept="image/*">
 
       <label for="profile">Profile</label>
-      <textarea name="profile" id="profile"></textarea>
+      <textarea name="profile" id="profile" placeholder="Introduce yourself: who are you?, how old are you?, what are your hobbies?, what are you looking for ?,..."></textarea>
 
     </fieldset>
 
     <fieldset>
 
-      <legend>Contact</legend>
+      <legend>&nbsp;Contact&nbsp;</legend>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required>
+      <label for="phone">Phone Number <span style="color: red;">(Required)</span></label>
+      <input type="tel" id="phone" name="phone" required placeholder="(XXX) XXX XXX XXX">
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email" name="email" placeholder="name@example.com">
 
-      <label for="address">Address</label>
-      <input type="text" id="address" name="address" required>
+      <label for="address">Address <span style="color: red;">(Required)</span></label>
+      <input type="text" id="address" name="address" required placeholder="Your address">
 
       <label for="linkedin">Linkedin</label>
-      <input type="text" id="linkedin" name="linkedin">
+      <input type="text" id="linkedin" name="linkedin" placeholder="@linkedin-username">
 
       <label for="website">Website</label>
-      <input type="url" id="website" name="website">
+      <input type="url" id="website" name="website" placeholder="https://your-website.com">
 
     </fieldset>
 
     <fieldset id="education">
       
-      <legend>Education</legend>
+      <legend>&nbsp;Education&nbsp;</legend>
 
       <label class="template">Title</label>
-      <input type="text" name="title" class="template">
+      <input type="text" name="title" class="template" placeholder="Diploma Name">
       <label class="template">Date</label>
-      <input type="text" name="date" class="template" maxlength="14">
+      <input type="text" name="date" class="template" maxlength="14" placeholder="Start Date and/Or Timespan">
       <label class="template">Details</label>
-      <textarea name="details" class="template"></textarea>
+      <textarea name="details" class="template" placeholder="Description "></textarea>
 
       <button type="button" onclick="addField('education')">Add</button>
 
@@ -73,12 +73,13 @@
 
     <fieldset id="skills">
       
-      <legend>Skills</legend>
+      <legend>&nbsp;Skills&nbsp;</legend>
 
-      <label class="template">Title</label>
-      <input type="text" name="title" class="template" required>
+      <label class="template">Title <span style="color: red;">(Required)</span></label>
+      <input type="text" name="title" class="template" required placeholder="Skill Name">
       <label class="template">Level</label>
-      <input type="range" name="level" class="template" min="0" max="100">
+      <span>0%</span>
+      <input type="range" name="level" class="template" min="0" max="100" value="0" oninput="this.previousElementSibling.innerText = `${this.value}%`">
 
       <button type="button" onclick="addField('skills')">Add</button>
 
@@ -86,16 +87,16 @@
 
     <fieldset id="experience">
       
-      <legend>Experience</legend>
+      <legend>&nbsp;Experience&nbsp;</legend>
 
-      <label class="template">Title</label>
-      <input type="text" name="title" class="template" required>
-      <label class="template">Subtitle</label>
-      <input type="text" name="subtitle" class="template" required>
-      <label class="template">Date</label>
-      <input type="text" name="date" class="template" maxlength="14" required>
+      <label class="template">Title <span style="color: red;">(Required)</span></label>
+      <input type="text" name="title" class="template" required placeholder="Job Title">
+      <label class="template">Subtitle <span style="color: red;">(Required)</span></label>
+      <input type="text" name="subtitle" class="template" required placeholder="Company Name">
+      <label class="template">Date <span style="color: red;">(Required)</span></label>
+      <input type="text" name="date" class="template" maxlength="14" required placeholder="Start Date and/Or Timespan">
       <label class="template">Details</label>
-      <textarea name="details" class="template"></textarea>
+      <textarea name="details" class="template" placeholder="Describe your position, status, accomplishments and achievements in the company, ..."></textarea>
 
       <button type="button" onclick="addField('experience')">Add</button>
 
@@ -103,16 +104,16 @@
 
     <fieldset id="certficates">
       
-      <legend>Certificates</legend>
+      <legend>&nbsp;Certificates&nbsp;</legend>
 
       <label class="template">Title</label>
-      <input type="text" name="title" class="template">
+      <input type="text" name="title" class="template" placeholder="Certificate Name">
       <label class="template">Subtitle</label>
-      <input type="text" name="subtitle" class="template">
+      <input type="text" name="subtitle" class="template" placeholder="Organization Name">
       <label class="template">Date</label>
-      <input type="text" name="date" class="template" maxlength="14">
+      <input type="text" name="date" class="template" maxlength="14" placeholder="Start Date and/Or Timespan">
       <label class="template">Details</label>
-      <textarea name="details" class="template"></textarea>
+      <textarea name="details" class="template" placeholder="Describe what you learned and the skills you gained, ..."></textarea>
 
       <button type="button" onclick="addField('certficates')">Add</button>
 
@@ -120,12 +121,13 @@
 
     <fieldset id="languages">
       
-      <legend>Languages</legend>
+      <legend>&nbsp;Languages&nbsp;</legend>
 
-      <label class="template">Title</label>
-      <input type="text" name="title" class="template" required>
-      <label class="template">Level</label>
-      <input type="range" name="level" class="template" min="0" max="100" step="20">
+      <label class="template">Title <span style="color: red;">(Required)</span></label>
+      <input type="text" name="title" class="template" required placeholder="Language: English, Arabic, ...">
+      <label class="template">Level <span style="color: red;">(Required)</span></label>
+      <span>1/5</span>
+      <input type="range" name="level" class="template" min="0" max="100" step="20" value="20" required oninput="this.previousElementSibling.innerText = `${this.value / 20}/5`">
 
       <button type="button" onclick="addField('languages')">Add</button>
 
@@ -133,12 +135,14 @@
 
     <fieldset id="expertise">
       
-      <legend>Expertise</legend>
+      <legend>&nbsp;Expertise&nbsp;</legend>
 
       <label class="template">Title</label>
-      <input type="text" name="title" class="template">
+      <input type="text" name="title" class="template" placeholder="Expertise Name">
       <label class="template">Level</label>
-      <input type="range" name="level" class="template" min="0" max="100">
+      <span>0%</span>
+      <input type="range" name="level" class="template" min="0" max="100" value="0" oninput="this.previousElementSibling.innerText = `${this.value}%`">
+      
 
       <button type="button" onclick="addField('expertise')">Add</button>
 
@@ -146,10 +150,10 @@
 
     <fieldset id="others">
       
-      <legend>Others</legend>
+      <legend>&nbsp;Others&nbsp;</legend>
 
       <label class="template">Title</label>
-      <input type="text" name="title" class="template">
+      <input type="text" name="title" class="template" placeholder="Sportman, Volunteer, Driver, ...">
 
       <button type="button" onclick="addField('others')">Add</button>
 
