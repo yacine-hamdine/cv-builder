@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0.625rem;
+    background-color: rgb(255, 209, 255);
+    gap: 0.625rem;
+}
+
+#header{
+    height: 3.125rem;
+    width: 100%;
+    background-color: rgb(255, 229, 255);
+    border: 2px solid rgb(207, 0, 207);
+    border-radius: 3.125rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#header h1, #header h2{
+    color: rgb(145, 0, 145);
+}
+
+#builder{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 229, 255);
+    border: 2px solid rgb(207, 0, 207);
+    border-radius: 1.875rem;
+    box-sizing: border-box;
+}
+
+#builder > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#builder > div:not(#render){
+    padding: 0.9375rem;
+}
+
+#photo{
+    grid-area: photo;
+}
+
+#fls{
+    grid-area: fls;
+}
+
+#profile{
+    grid-area: profile;
+}
+
+#contact{
+    grid-area: contact;
+}
+
+#education{
+    grid-area: education;
+}
+
+#skills{
+    grid-area: skills;
+}
+
+#experience{
+    grid-area: experience;
+}
+
+#certificates{
+    grid-area: certificates;
+}
+
+#expertise{
+    grid-area: expertise;
+}
+
+#languages{
+    grid-area: languages;
+}
+
+#others{
+    grid-area: others;
+}
+
+#builder #render #printable{
+    background-color: #ffffff;
+    height: calc(219.25rem / 5.5); /* A4 height : 3508px = 219.25rem */
+    width: calc(155rem / 5.5); /* A4 width : 2480px = 155rem */ 
+    display: grid;
+    grid-template-areas: "photo fls"
+                         "contact profile"
+                         "education experience"
+                         "skills experience"
+                         "expertise certificates"
+                         "languages certificate";
+}
